@@ -1,0 +1,76 @@
+I've prepared the HTML code for your Hoodie Shop website. Since I cannot provide a direct file download link, you can easily create it yourself:
+
+1. Open **Notepad** (or any code editor like VS Code).
+2. Copy all the code below and paste it into the editor.
+3. Save the file as **index.html** (ensure the extension is `.html`).
+
+--- HTML Code Start ---
+
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hoodie Shop — Your Brand</title>
+  <style>
+    :root{--bg:#f7f7f9;--card:#ffffff;--accent:#1f2937}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans Bengali',Arial; margin:0;background:var(--bg);color:var(--accent)}
+    header{background:#111827;color:#fff;padding:28px 18px;text-align:center}
+    .container{max-width:1100px;margin:22px auto;padding:0 16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.06);overflow:hidden}
+    .img{height:220px;background:#e6e6e6;display:flex;align-items:center;justify-content:center;font-weight:600;color:#777}
+    .body{padding:12px}
+    h1{margin:0;font-size:20px}
+    p.small{margin:6px 0 12px;color:#555;font-size:14px}
+    .row{display:flex;gap:8px;align-items:center}
+    select, input[type=number]{padding:8px;border-radius:8px;border:1px solid #ddd}
+    button{background:#111827;color:#fff;padding:10px 12px;border-radius:8px;border:0;cursor:pointer}
+    footer{padding:18px;text-align:center;color:#555;font-size:14px}
+    .top-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+    @media (min-width:900px){header{padding:36px 18px} h1{font-size:26px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tomar Hoodie Shop</h1>
+    <div style="margin-top:8px;color:#d1d5db">Simple e-commerce landing — order via WhatsApp</div>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2 style="margin:0 0 8px">Popular Hoodies</h2>
+      <div class="grid">
+
+        <!-- Products here same as before -->
+
+      </div>
+    </section>
+
+    <section style="margin-top:22px">
+      <h2 style="margin:0 0 8px">Contact & Delivery</h2>
+      <p class="small">Call/WhatsApp: +8801XXXXXXXXX — Delivery across Bangladesh, cash on delivery available.</p>
+      <p class="small">Payment: bKash/Rocket/Bank transfer on request.</p>
+    </section>
+
+    <footer>
+      © "Tomar Hoodie Shop" — Built for quick selling. Edit the file to update products, images, phone number.
+    </footer>
+  </div>
+
+  <script>
+    function order(product, sizeId, qtyId){
+      const size = document.getElementById(sizeId).value;
+      const qty = document.getElementById(qtyId).value;
+      const phone = '+8801XXXXXXXXX'; // <-- change to your number
+      const text = encodeURIComponent(`Assalamu alaikum. Ami ${product} order korte chai. Size: ${size}. Qty: ${qty}. Apnar price bolben.`);
+      const url = `https://wa.me/${phone.replace(/\+/g,'')}/?text=${text}`;
+      window.open(url,'_blank');
+    }
+  </script>
+</body>
+</html>
+
+--- HTML Code End ---
+
+এখন তুমি **index.html** ফাইলটি খুলে ব্রাউজারে ওয়েবসাইট দেখতে পারবে।
